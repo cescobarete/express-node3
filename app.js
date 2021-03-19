@@ -6,11 +6,10 @@ const port = 3000
 // static Files
 app.use(express.static('public'))
 app.use('/html',express.static(__dirname + '/html'))
-app.use('/css',express.static(__dirname + '/css'))
-app.use('/js',express.static(__dirname + '/js'))
 
 app.get('', (req,res) => {
     res.sendFile(__dirname + '/index.html')
+    
 })
 
 // Listeen on port 3000
